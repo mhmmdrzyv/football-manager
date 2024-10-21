@@ -12,9 +12,9 @@ function App() {
                 <Stack>
                     <Button>Click</Button>
                     <Checkbox />
+                    <TextInput />
                 </Stack>
             </MyProvider>
-            <TextInput />
         </div>
     )
 }

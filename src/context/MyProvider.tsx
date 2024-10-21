@@ -1,6 +1,6 @@
 import { createContext, FC, ReactNode, useContext } from "react"
 
-export const MyContext = createContext({})
+export const MyContext = createContext<undefined | {}>(undefined)
 
 interface IMyProviderProps {
     children: ReactNode
@@ -13,7 +13,7 @@ export const MyProvider: FC<IMyProviderProps> = ({ children }) => {
 export const useMyContext = () => {
     const context = useContext(MyContext)
     if (!context) {
-        throw new Error("useMyContext must be used within MyProvider")
+        throw new Error("component must be used within MyProvider")
     }
     return context
 }
