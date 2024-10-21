@@ -4,6 +4,7 @@
  * gap
  */
 import { FC } from "react"
+import { useMyContext } from "../context/MyProvider.tsx"
 
 interface IGroupProps {
     justify?: "flex-start" | "flex-end" | "center" | "space-between" | "space-around"
@@ -35,5 +36,7 @@ const gapTypes: Record<string, string> = {
 }
 
 export const Group: FC<IGroupProps> = ({ justify = "flex-start", items = "flex-start", gap = "xs", children }) => {
+    const context = useMyContext()
+
     return <div className={`tw-flex ${justifyTypes[justify]} ${itemsTypes[items]} ${gapTypes[gap]}`}>{children}</div>
 }

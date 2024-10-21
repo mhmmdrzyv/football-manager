@@ -5,6 +5,7 @@
  */
 
 import { FC } from "react"
+import { useMyContext } from "../context/MyProvider.tsx"
 
 interface IButtonProps {
     variant?: "filled" | "transparent"
@@ -33,6 +34,8 @@ const radiusTypes: Record<string, string> = {
 }
 
 export const Button: FC<IButtonProps> = ({ variant = "filled", size = "sm", radius = "xs", children, onClick }) => {
+    const context = useMyContext()
+
     return (
         <button className={`${variantTypes[variant]} ${sizeTypes[size]} ${radiusTypes[radius]}`} onClick={onClick}>
             {children}

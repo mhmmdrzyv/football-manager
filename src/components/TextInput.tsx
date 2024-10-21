@@ -6,6 +6,7 @@
  * label:string
  */
 import { FC } from "react"
+import { useMyContext } from "../context/MyProvider.tsx"
 
 interface ITextInputProps {
     value?: string
@@ -30,6 +31,8 @@ const radiusTypes: Record<string, string> = {
 }
 
 export const TextInput: FC<ITextInputProps> = ({ value, size = "sm", placeholder, radius = "xs", label, onChange }) => {
+    const context = useMyContext()
+
     return (
         <div>
             <label htmlFor={"input"}>{label}</label>

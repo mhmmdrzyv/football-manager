@@ -4,6 +4,7 @@
  * gap
  */
 import { FC } from "react"
+import { useMyContext } from "../context/MyProvider.tsx"
 
 interface IStackProps {
     justify?: "flex-start" | "flex-end" | "center" | "space-between" | "space-around"
@@ -35,6 +36,8 @@ const gapTypes: Record<string, string> = {
 }
 
 export const Stack: FC<IStackProps> = ({ justify = "flex-start", items = "flex-start", gap = "xs", children }) => {
+    const context = useMyContext()
+
     return (
         <div className={`tw-flex tw-flex-col ${justifyTypes[justify]} ${itemsTypes[items]} ${gapTypes[gap]}`}>
             {children}

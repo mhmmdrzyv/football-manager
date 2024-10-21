@@ -5,6 +5,7 @@
  * label:string
  */
 import { FC } from "react"
+import { useMyContext } from "../context/MyProvider.tsx"
 
 interface ICheckboxProps {
     checked?: boolean
@@ -20,6 +21,8 @@ const sizeTypes: Record<string, string> = {
 }
 
 export const Checkbox: FC<ICheckboxProps> = ({ checked, size = "sm", label, onChange }) => {
+    const context = useMyContext()
+
     return (
         <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
             <input
