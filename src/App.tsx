@@ -7,15 +7,15 @@ import { MyProvider } from "./context/MyProvider.tsx"
 
 function App() {
     return (
-        <div>
-            <MyProvider>
-                <Stack>
-                    <Button>Click</Button>
-                    <Checkbox />
-                    <TextInput />
-                </Stack>
-            </MyProvider>
-        </div>
+        <MyProvider>
+            <Stack>
+                <Button>Click</Button>
+                <Checkbox />
+                <Checkbox />
+                <Checkbox />
+                <TextInput />
+            </Stack>
+        </MyProvider>
     )
 }
 

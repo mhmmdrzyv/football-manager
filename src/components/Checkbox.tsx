@@ -7,6 +7,8 @@
 import { FC } from "react"
 import { useMyContext } from "../context/MyProvider.tsx"
 
+import { v4 as uuidv4 } from "uuid"
+
 interface ICheckboxProps {
     checked?: boolean
     size?: "sm" | "md" | "lg"
@@ -21,18 +23,13 @@ const sizeTypes: Record<string, string> = {
 }
 
 export const Checkbox: FC<ICheckboxProps> = ({ checked, size = "sm", label, onChange }) => {
-    const context = useMyContext()
+    useMyContext()
+    const id: string = uuidv4()
 
     return (
         <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-            <input
-                id={"checkbox"}
-                type="checkbox"
-                checked={checked}
-                className={`${sizeTypes[size]}`}
-                onChange={onChange}
-            />
-            <label htmlFor={"checkbox"}>{label}</label>
+            <input id={id} type="checkbox" checked={checked} className={`${sizeTypes[size]}`} onChange={onChange} />
+            <label htmlFor={id}>{label}</label>
         </div>
     )
 }

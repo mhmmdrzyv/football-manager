@@ -31,7 +31,7 @@ const radiusTypes: Record<string, string> = {
 }
 
 export const TextInput: FC<ITextInputProps> = ({ value, size = "sm", placeholder, radius = "xs", label, onChange }) => {
-    const context = useMyContext()
+    useMyContext()
 
     return (
         <div>

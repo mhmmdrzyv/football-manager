@@ -36,7 +36,7 @@ const gapTypes: Record<string, string> = {
 }
 
 export const Group: FC<IGroupProps> = ({ justify = "flex-start", items = "flex-start", gap = "xs", children }) => {
-    const context = useMyContext()
+    useMyContext()
 
     return <div className={`tw-flex ${justifyTypes[justify]} ${itemsTypes[items]} ${gapTypes[gap]}`}>{children}</div>
 }

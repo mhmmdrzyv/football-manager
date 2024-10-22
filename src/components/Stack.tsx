@@ -36,7 +36,7 @@ const gapTypes: Record<string, string> = {
 }
 
 export const Stack: FC<IStackProps> = ({ justify = "flex-start", items = "flex-start", gap = "xs", children }) => {
-    const context = useMyContext()
+    useMyContext()
 
     return (
         <div className={`tw-flex tw-flex-col ${justifyTypes[justify]} ${itemsTypes[items]} ${gapTypes[gap]}`}>
