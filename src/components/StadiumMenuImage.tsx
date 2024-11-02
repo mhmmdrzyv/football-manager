@@ -1,16 +1,12 @@
 import { cn } from "@/vercel/lib/utils.ts"
 import { FC } from "react"
 
-interface StadiumMenuImageProps {
-    size?: number
-}
+interface StadiumMenuImageProps {}
 
-export const StadiumMenuImage: FC<StadiumMenuImageProps> = ({ size = 128 }) => {
-    const sizePx = `${size}px`
-
+export const StadiumMenuImage: FC<StadiumMenuImageProps> = ({}) => {
     return (
         <div
-            className={`group origin-top-left bg-green-600 relative rounded w-[${sizePx}] aspect-[2/3] p-1`}
+            className={`group origin-top-left bg-green-600 relative rounded w-32 aspect-[2/3] p-1`}
         >
             <div
                 className={
