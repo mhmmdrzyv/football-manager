@@ -1,21 +1,21 @@
 import "./index.scss"
-import { Button } from "./components/Button.tsx"
-import { Checkbox } from "./components/Checkbox.tsx"
-import { TextInput } from "./components/TextInput.tsx"
-import { Stack } from "./components/Stack.tsx"
-import { MyProvider } from "./context/MyProvider.tsx"
+import { Navigate, Route, Routes } from "react-router-dom"
+import { LoginPage } from "@/pages/LoginPage.tsx"
+import { RegisterPage } from "@/pages/RegisterPage.tsx"
+import { SetupPage } from "@/pages/SetupPage.tsx"
+import { MainPage } from "@/pages/MainPage.tsx"
 
 function App() {
     return (
-        <MyProvider>
-            <Stack>
-                <Button>Click</Button>
-                <Checkbox />
-                <Checkbox />
-                <Checkbox />
-                <TextInput />
-            </Stack>
-        </MyProvider>
+        <Routes>
+            <Route path={"/"}>
+                <Route path={""} element={<Navigate to={"login"} />} />
+                <Route path={"login"} element={<LoginPage />} />
+                <Route path={"register"} element={<RegisterPage />} />
+                <Route path={"setup"} element={<SetupPage />} />
+                <Route path={"main"} element={<MainPage />} />
+            </Route>
+        </Routes>
     )
 }
 
