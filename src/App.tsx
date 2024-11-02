@@ -1,4 +1,5 @@
 import "./index.scss"
+import { Components } from "@/pages/Components.tsx"
 import { Navigate, Route, Routes } from "react-router-dom"
 import { LoginPage } from "@/pages/LoginPage.tsx"
 import { RegisterPage } from "@/pages/RegisterPage.tsx"
@@ -14,6 +15,7 @@ function App() {
                 <Route path={"register"} element={<RegisterPage />} />
                 <Route path={"setup"} element={<SetupPage />} />
                 <Route path={"main"} element={<MainPage />} />
+                <Route path={"components"} element={<Components />} />
             </Route>
         </Routes>
     )
