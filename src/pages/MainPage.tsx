@@ -28,7 +28,7 @@ const menuItems = [
                             height={50}
                             className="mx-auto"
                         />
-                        <p className="mt-2">Team B</p>
+                        <p className="mt-2">Team Ali</p>
                     </div>
                 </div>
                 <div>
