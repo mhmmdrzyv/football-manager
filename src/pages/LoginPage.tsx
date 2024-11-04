@@ -18,7 +18,7 @@ export const LoginPage = () => {
     }
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-900 p-4">
+        <div className="h-dvh flex items-center justify-center bg-gray-900 p-4">
             <Card className="w-full max-w-md bg-transparent border border-gray-500">
                 <CardHeader>
                     <CardTitle className="text-xl font-bold text-center text-white">
