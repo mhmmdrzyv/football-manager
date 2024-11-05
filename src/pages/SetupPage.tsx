@@ -122,9 +122,9 @@ export const SetupPage = () => {
     }
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-900 p-8 overflow-hidden">
-            <div className="w-full max-w-6xl">
-                <div className="text-2xl text-white text-center mb-4">
+        <div className="min-h-screen flex items-center justify-center bg-gray-900 p-4 overflow-hidden">
+            <div className="w-full max-w-4xl">
+                <div className="text-3xl text-white text-center mb-4">
                     Welcome manager !
                 </div>
                 <div className="text-lg  text-gray-300 text-center mb-8">
