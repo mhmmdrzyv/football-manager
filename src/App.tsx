@@ -2,9 +2,9 @@ import "./index.scss"
 import { Components } from "@/pages/Components.tsx"
 import { Navigate, Route, Routes } from "react-router-dom"
 import { RegisterPage } from "@/pages/RegisterPage.tsx"
-import { SetupPage } from "@/pages/SetupPage.tsx"
 import { MainPage } from "@/pages/MainPage.tsx"
 import { LoginPage } from "@/pages/LoginPage.tsx"
+import { SetupPage } from "@/pages/SetupPage.tsx"
 
 function App() {
     return (

@@ -20,6 +20,7 @@ export const StadiumMenuImage: FC<StadiumMenuImageProps> = ({}) => {
                                 "bg-green-600": i % 2 === 0,
                                 "bg-green-700": i % 2 === 1,
                             })}
+                            key={i}
                         ></div>
                     ))}
                 </div>

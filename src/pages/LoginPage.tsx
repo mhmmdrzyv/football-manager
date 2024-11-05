@@ -8,13 +8,17 @@ import {
     CardHeader,
     CardTitle,
 } from "@/vercel/components/ui/card"
+import { useNavigate } from "react-router-dom"
 
 export const LoginPage = () => {
     const [email, setEmail] = useState<string>("")
     const [password, setPassword] = useState<string>("")
 
+    const navigate = useNavigate()
+
     const handleLogin = () => {
         console.log("Login attempted with:", { email, password })
+        navigate("/setup")
     }
 
     return (

@@ -8,11 +8,14 @@ import {
     CardHeader,
     CardTitle,
 } from "@/vercel/components/ui/card"
+import { useNavigate } from "react-router-dom"
 
 export const RegisterPage = () => {
     const [managerName, setManagerName] = useState<string>("")
     const [email, setEmail] = useState<string>("")
     const [password, setPassword] = useState<string>("")
+
+    const navigate = useNavigate()
 
     const handleRegister = () => {
         console.log("Register attempted with:", {
@@ -20,6 +23,7 @@ export const RegisterPage = () => {
             email,
             password,
         })
+        navigate("/login")
     }
 
     return (
