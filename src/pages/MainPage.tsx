@@ -125,7 +125,7 @@ export const MainPage = () => {
                         className="absolute left-0 z-10 text-white"
                         aria-label="Previous item"
                     >
-                        <ChevronLeft size={30} />
+                        <ChevronLeft size={40} />
                     </button>
                     <div className="flex items-center justify-center space-x-4">
                         <AnimatePresence mode="popLayout">
@@ -164,7 +164,7 @@ export const MainPage = () => {
                         className="absolute right-0 z-10 text-white"
                         aria-label="Next item"
                     >
-                        <ChevronRight size={30} />
+                        <ChevronRight size={40} />
                     </button>
                 </div>
             </div>
