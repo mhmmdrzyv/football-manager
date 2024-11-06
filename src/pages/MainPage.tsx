@@ -103,7 +103,7 @@ const menuItems = [
 ]
 
 export const MainPage = () => {
-    const [currentIndex, setCurrentIndex] = useState(2)
+    const [currentIndex, setCurrentIndex] = useState(0)
 
     const nextItem = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % menuItems.length)
