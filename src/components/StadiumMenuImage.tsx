@@ -6,7 +6,7 @@ interface StadiumMenuImageProps {}
 export const StadiumMenuImage: FC<StadiumMenuImageProps> = ({}) => {
     return (
         <div
-            className={`group origin-top-left bg-green-600 relative rounded w-32 aspect-[2/3] p-1`}
+            className={`group origin-top-left bg-green-600 relative rounded w-32 aspect-[2/3]`}
         >
             <div
                 className={
@@ -20,6 +20,7 @@ export const StadiumMenuImage: FC<StadiumMenuImageProps> = ({}) => {
                                 "bg-green-600": i % 2 === 0,
                                 "bg-green-700": i % 2 === 1,
                             })}
+                            key={i}
                         ></div>
                     ))}
                 </div>

@@ -1,3 +1,7 @@
+import {
+    exampleData,
+    LeagueTableMenuItem,
+} from "@/components/LeagueTableMenuItem.tsx"
 import { StadiumMenuImage } from "@/components/StadiumMenuImage.tsx"
 import { AnimatePresence, motion } from "framer-motion"
 import { ChevronLeft, ChevronRight } from "lucide-react"
@@ -52,7 +56,7 @@ const menuItems = [
                 </div>
                 <div
                     className={
-                        "absolute transition-all group-hover:transition-all -bottom-16 group-hover:-bottom-12 translate-x-[36%] scale-110"
+                        "absolute transition-all group-hover:transition-all -bottom-16 group-hover:-bottom-12 left-[50%] -translate-x-[50%] scale-110"
                     }
                 >
                     <StadiumMenuImage />
@@ -65,41 +69,16 @@ const menuItems = [
         content: (
             <div className="flex flex-col gap-4">
                 <div className="text-xl font-bold text-white mb-4 text-center">
-                    Legue Table
+                    League Table
                 </div>
-                <table className="w-full text-sm">
-                    <thead>
-                        <tr className="border-b">
-                            <th className="text-left">Team</th>
-                            <th className="text-center">W</th>
-                            <th className="text-center">D</th>
-                            <th className="text-center">L</th>
-                            <th className="text-center">P</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr className="text-gray-500">
-                            <td>Team Above</td>
-                            <td className="text-center">10</td>
-                            <td className="text-center">2</td>
-                            <td className="text-center">3</td>
-                            <td className="text-center">32</td>
-                        </tr>
-                        <tr className="font-bold">
-                            <td>Your Team</td>
-                            <td className="text-center">9</td>
-                            <td className="text-center">3</td>
-                            <td className="text-center">3</td>
-                            <td className="text-center">30</td>
-                        </tr>
-                        <tr className="text-gray-500">
-                            <td>Team Below</td>
-                            <td className="text-center">8</td>
-                            <td className="text-center">4</td>
-                            <td className="text-center">3</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div
+                    className={
+                        // "absolute transition-all group-hover:transition-all -bottom-16 group-hover:-bottom-12 translate-x-[36%] scale-110"
+                        "absolute transition-all group-hover:transition-all -bottom-12 group-hover:-bottom-4 left-[50%] -translate-x-[50%]"
+                    }
+                >
+                    <LeagueTableMenuItem rows={exampleData} />
+                </div>
             </div>
         ),
     },
@@ -138,13 +117,7 @@ export const MainPage = () => {
     }
 
     return (
-        <div
-            className="min-h-screen flex items-center justify-center p-4 overflow-hidden"
-            style={{
-                background:
-                    "linear-gradient(to bottom, black 0%, black 30%, #1e3a8a 90%, #1e40af 100%)",
-            }}
-        >
+        <div className="h-dvh flex items-center bg-gray-900 justify-center p-4 overflow-hidden">
             <div className="w-full max-w-4xl">
                 <div className="relative flex items-center justify-center">
                     <button
@@ -152,7 +125,7 @@ export const MainPage = () => {
                         className="absolute left-0 z-10 text-white"
                         aria-label="Previous item"
                     >
-                        <ChevronLeft size={30} />
+                        <ChevronLeft size={40} />
                     </button>
                     <div className="flex items-center justify-center space-x-4">
                         <AnimatePresence mode="popLayout">
@@ -176,7 +149,7 @@ export const MainPage = () => {
                                         transition={{ duration: 0.1 }}
                                         className={`group w-64 h-64 ${offset === 0 ? "z-20" : "z-10"} max-w-[60vw]`}
                                     >
-                                        <div className="w-full h-full bg-black bg-transparent backdrop-blur-md rounded-lg border border-white border-opacity-50 p-4 flex flex-col relative overflow-hidden">
+                                        <div className="w-full h-full bg-transparent rounded-lg border border-white border-opacity-50 p-4 flex flex-col relative overflow-hidden">
                                             <div className="flex-grow overflow-auto text-white">
                                                 {item.content}
                                             </div>
@@ -191,7 +164,7 @@ export const MainPage = () => {
                         className="absolute right-0 z-10 text-white"
                         aria-label="Next item"
                     >
-                        <ChevronRight size={30} />
+                        <ChevronRight size={40} />
                     </button>
                 </div>
             </div>
