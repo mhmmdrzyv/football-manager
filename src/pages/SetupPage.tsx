@@ -122,7 +122,7 @@ export const SetupPage = () => {
     }
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-900 p-4 overflow-hidden">
+        <div className="h-dvh flex items-center justify-center bg-gray-900 p-4 overflow-hidden">
             <div className="w-full max-w-4xl">
                 <div className="text-3xl text-white text-center mb-4">
                     Welcome manager !
@@ -162,7 +162,7 @@ export const SetupPage = () => {
                                         transition={{ duration: 0.1 }}
                                         className={`w-64 h-64 ${offset === 0 ? "z-20" : "z-10"} max-w-[60vw] cursor-pointer`}
                                     >
-                                        <div className="w-full h-full bg-transparent bg-opacity-50 backdrop-blur-md rounded-lg border border-white border-opacity-40 p-4 flex flex-col items-center justify-center">
+                                        <div className="w-full h-full bg-transparent rounded-lg border border-white border-opacity-40 p-4 flex flex-col items-center justify-center">
                                             <img
                                                 src={team.logo}
                                                 alt={`${team.name} logo`}

@@ -117,13 +117,7 @@ export const MainPage = () => {
     }
 
     return (
-        <div
-            className="min-h-screen flex items-center justify-center p-4 overflow-hidden"
-            style={{
-                background:
-                    "linear-gradient(to bottom, black 0%, black 30%, #1e3a8a 90%, #1e40af 100%)",
-            }}
-        >
+        <div className="h-dvh flex items-center bg-gray-900 justify-center p-4 overflow-hidden">
             <div className="w-full max-w-4xl">
                 <div className="relative flex items-center justify-center">
                     <button
@@ -155,7 +149,7 @@ export const MainPage = () => {
                                         transition={{ duration: 0.1 }}
                                         className={`group w-64 h-64 ${offset === 0 ? "z-20" : "z-10"} max-w-[60vw]`}
                                     >
-                                        <div className="w-full h-full bg-black bg-transparent backdrop-blur-md rounded-lg border border-white border-opacity-50 p-4 flex flex-col relative overflow-hidden">
+                                        <div className="w-full h-full bg-transparent rounded-lg border border-white border-opacity-50 p-4 flex flex-col relative overflow-hidden">
                                             <div className="flex-grow overflow-auto text-white">
                                                 {item.content}
                                             </div>
