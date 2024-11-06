@@ -134,7 +134,7 @@ export const SetupPage = () => {
                 <div className="relative flex items-center justify-center">
                     <button
                         onClick={prevItem}
-                        className="absolute left-0 z-10 text-gray-300"
+                        className="absolute left-0 z-10 text-white"
                         aria-label="Previous team"
                     >
                         <ChevronLeft size={40} />
@@ -184,7 +184,7 @@ export const SetupPage = () => {
                     </div>
                     <button
                         onClick={nextItem}
-                        className="absolute right-0 z-10 text-gray-300"
+                        className="absolute right-0 z-10 text-white"
                         aria-label="Next team"
                     >
                         <ChevronRight size={40} />
