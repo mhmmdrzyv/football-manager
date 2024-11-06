@@ -1,3 +1,7 @@
+import {
+    exampleData,
+    LeagueTableMenuItem,
+} from "@/components/LeagueTableMenuItem.tsx"
 import { StadiumMenuImage } from "@/components/StadiumMenuImage.tsx"
 import { AnimatePresence, motion } from "framer-motion"
 import { ChevronLeft, ChevronRight } from "lucide-react"
@@ -52,7 +56,7 @@ const menuItems = [
                 </div>
                 <div
                     className={
-                        "absolute transition-all group-hover:transition-all -bottom-16 group-hover:-bottom-12 translate-x-[36%] scale-110"
+                        "absolute transition-all group-hover:transition-all -bottom-16 group-hover:-bottom-12 left-[50%] -translate-x-[50%] scale-110"
                     }
                 >
                     <StadiumMenuImage />
@@ -65,41 +69,16 @@ const menuItems = [
         content: (
             <div className="flex flex-col gap-4">
                 <div className="text-xl font-bold text-white mb-4 text-center">
-                    Legue Table
+                    League Table
                 </div>
-                <table className="w-full text-sm">
-                    <thead>
-                        <tr className="border-b">
-                            <th className="text-left">Team</th>
-                            <th className="text-center">W</th>
-                            <th className="text-center">D</th>
-                            <th className="text-center">L</th>
-                            <th className="text-center">P</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr className="text-gray-500">
-                            <td>Team Above</td>
-                            <td className="text-center">10</td>
-                            <td className="text-center">2</td>
-                            <td className="text-center">3</td>
-                            <td className="text-center">32</td>
-                        </tr>
-                        <tr className="font-bold">
-                            <td>Your Team</td>
-                            <td className="text-center">9</td>
-                            <td className="text-center">3</td>
-                            <td className="text-center">3</td>
-                            <td className="text-center">30</td>
-                        </tr>
-                        <tr className="text-gray-500">
-                            <td>Team Below</td>
-                            <td className="text-center">8</td>
-                            <td className="text-center">4</td>
-                            <td className="text-center">3</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div
+                    className={
+                        // "absolute transition-all group-hover:transition-all -bottom-16 group-hover:-bottom-12 translate-x-[36%] scale-110"
+                        "absolute transition-all group-hover:transition-all -bottom-12 group-hover:-bottom-4 left-[50%] -translate-x-[50%]"
+                    }
+                >
+                    <LeagueTableMenuItem rows={exampleData} />
+                </div>
             </div>
         ),
     },
@@ -124,7 +103,7 @@ const menuItems = [
 ]
 
 export const MainPage = () => {
-    const [currentIndex, setCurrentIndex] = useState(0)
+    const [currentIndex, setCurrentIndex] = useState(2)
 
     const nextItem = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % menuItems.length)
